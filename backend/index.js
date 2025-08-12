@@ -8,6 +8,7 @@ import express from 'express';
 
 // Routes imports
 import authRoute from './src/routes/auth.route.js';
+import accountRoute from './src/routes/account.route.js';
 
 // App configs and middlewares
 const app = express();
@@ -17,6 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.use('/auth', authRoute);
+app.use('/product', accountRoute);
 
 
 // App entry
