@@ -63,3 +63,16 @@ CREATE TABLE transfer (
 	date DATETIME,
     FOREIGN KEY (transfer_detail_id) REFERENCES transfer_detail(id)
 );
+
+
+-- INSERCION DE DATOS INICIALES, CATALOGOS, ETC
+INSERT INTO card_company (name) VALUES ('VISA');
+INSERT INTO card_company (name) VALUES ('MC');
+INSERT INTO card_company (name) VALUES ('AMEX');
+
+INSERT INTO other_banks (name) VALUES ('BI');
+INSERT INTO other_banks (name) VALUES ('BAM');
+INSERT INTO other_banks (name) VALUES ('BAC');
+
+-- INSERT INTO user (name, last_name, email, username, password, dpi) VALUES ('Julio', 'Mayen', 'mayenrosil@gmail.com', 'mayenrosil', '123456', '3007260230101');
+
