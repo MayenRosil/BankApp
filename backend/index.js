@@ -1,7 +1,12 @@
-import express from 'express';
-import { connection } from './src/configs/db.js';
 
-// Routes
+import express from 'express';
+
+// EL CAMPO CODE EN LAS RESPUESTAS ES UN CATALOGO DE TIPOS DE ERROR PARA QUE EL CLIENTE (FRONTEND) LO MANEJE DE MEJOR MANERA
+// 0 ES OPERACION EXITOSA
+// 1 ES ERROR DEL CLIENTE O DE PROCESAMIENTO
+// 2 ES ERROR DE PROGRAMACION, FALLO ALGUN TRY Y ENTRO AL CATCH
+
+// Routes imports
 import authRoute from './src/routes/auth.route.js';
 
 // App configs and middlewares
@@ -16,5 +21,5 @@ app.use('/auth', authRoute);
 
 // App entry
 app.listen(PORT, () => {
-  console.log(`Example app listening on port ${PORT}`)
+  console.log(`BankApp listening on port ${PORT}`)
 })

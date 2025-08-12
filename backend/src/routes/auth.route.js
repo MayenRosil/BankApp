@@ -1,9 +1,16 @@
+
 import { Router } from "express";
-import { register } from "../controllers/auth.js";
+import { getUsers, login, register } from "../controllers/auth.js";
+import { validateSession } from "../middlewares/auth.js";
+
+// Login, Register and Auth defined routes
+
 
 const router = Router();
 
-router.post('/', register);
+router.post('/register/', register);
+router.post('/login/', login);
+router.get('/users/', validateSession, getUsers);
 
 
 export default router;
